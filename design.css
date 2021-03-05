@@ -1,0 +1,362 @@
+/*---------- header ----------*/
+header .top, header .middle, header .bottom{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header .top{
+  box-sizing: border-box;
+  height : 80px;
+  padding : 22px 5px;
+  background-color : rgb(236, 251, 232);
+  border-top : 4px solid rgb(10, 228, 18);
+}
+
+header .middle{
+  box-sizing: border-box;
+  height : 70px;
+  padding : 17px 5px;
+}
+
+header .pointer{
+  cursor : pointer;
+}
+
+header .pointer input{
+  cursor : pointer;
+}
+
+header .top > div, header .middle > div{
+  margin : 0 5px;
+}
+
+header .top > div > label{
+  position : absolute;
+  top : 25px;
+  margin-left : 10px;
+  background-color : rgb(236, 251, 232);
+  font-size : 11px;
+}
+
+ header .middle > div > label{
+   position : absolute;
+   top : 97px;
+   margin-left : 10px;
+   background-color : #fff;
+   font-size : 11px;
+ }
+
+header .top > div > input, header .middle > div > input{
+  box-sizing: border-box;
+  height : 35px;
+  border-radius: 5px;
+  outline : none;
+  border : 1px solid rgba(0,0,0,0.3);
+  padding : 10px;
+  font-size : 15px;
+  width : 100%;
+}
+
+header .wrapper{
+  display : flex;
+  flex-direction: row;
+  background-color : #fff;
+  border-radius: 5px;
+  border : 1px solid rgba(0,0,0,0.3);
+  height : 35px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+header .wrapper input{
+  outline : none;
+  border : none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height : 33px;
+  padding : 10px;
+  font-size : 15px;
+  width : 100%;
+}
+
+header .wrapper label{
+  position : absolute;
+  top : 25px;
+  margin-left : 10px;
+  background-color : rgb(236, 251, 232);
+  font-size : 11px;
+}
+
+header .middle .wrapper label{
+  top : 97px;
+  background-color : #fff;
+}
+
+header .top > div:nth-child(1){width : 90px;}
+header .top > div:nth-child(2){width : 45px;}
+header .top > div:nth-child(3){width : 165px;}
+header .top > div:nth-child(4){width : 45px;}
+header .top > div:nth-child(5){width : 100px;}
+header .top > div:nth-child(6){width : 210px;}
+header .top > div:nth-child(7){width : 800px;}
+header .top > div:nth-child(8){width : 350px;}
+header .top .wrapper > div:nth-child(1){width : 85px;}
+header .top .wrapper > div:nth-child(2){width : 100%;}
+
+header .middle .wrapper:nth-child(1){width : 590px;}
+header .middle .wrapper:nth-child(1) > div:nth-child(1){width : 85px;}
+header .middle .wrapper:nth-child(1) > div:nth-child(2){width : 85px;}
+header .middle .wrapper:nth-child(1) > div:nth-child(3){width : 150px;}
+header .middle .wrapper:nth-child(1) > div:nth-child(4){width : 270px;}
+
+header .middle .wrapper:nth-child(2){width : 120px;}
+header .middle .wrapper:nth-child(2) > div:nth-child(1){width : 60px;}
+header .middle .wrapper:nth-child(2) > div:nth-child(2){width : 60px;}
+
+header .middle .wrapper:nth-child(3){width : 650px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(1){width : 100px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(2){width : 100px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(3){width : 100px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(4){width : 100px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(5){width : 100px;}
+header .middle .wrapper:nth-child(3) > div:nth-child(6){width : 150px;}
+
+header .middle > div:nth-child(4){width : 150px;}
+header .middle > div:nth-child(5){width : 350px;}
+
+/*--------------popup design----------------*/
+#popup1, #popup2{
+  position : absolute;
+  background-color : rgb(242, 242, 242);
+  border : 1px solid black;
+  z-index : 100;
+  box-sizing: border-box;
+}
+
+#popup1{
+  width : 615px;
+  left : 160px;
+  top : 75px;
+  padding : 40px 70px;
+}
+
+#popup1 input{
+  box-sizing: border-box;
+  height : 35px;
+  width : 100%;
+  outline : none;
+  border : 1px solid rgb(0,0,0,0.3);
+  border-radius: 5px;
+  padding : 10px;
+  font-size : 15px;
+}
+
+#popup1 label{
+  position : absolute;
+  font-size : 10px;
+  background-color : #fff;
+  margin-left : 10px;
+  margin-top : -6px;
+}
+
+#popup1 > div > button{
+  border : 1px solid rgb(0,0,0,0.3);
+  border-radius: 5px;
+  background-color : rgb(229, 245, 249);
+  outline : none;
+  cursor : pointer;
+}
+
+#popup1 > div{
+  margin : 20px 0;
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#popup1 > div > div{
+  flex : 1;
+}
+
+#popup1 > div:nth-child(1) > div:nth-child(1){
+  margin-right : 20px;
+}
+
+#popup1 > div > div{
+  margin-right : 10px;
+}
+
+#popup1 .setTime{
+  display : flex;
+  flex-direction: column;
+  background-color : #fff;
+  border : 1px solid rgb(0,0,0,0.3);
+  border-radius: 5px;
+  padding : 10px 20px;
+}
+
+#popup1 .setTime > div{
+  display : flex;
+  flex-direction: row;
+}
+
+#popup1 .setTime > div:nth-child(1){
+  margin-bottom : 10px;
+}
+
+#popup1 .setTime button{
+  background-color : #fff;
+  outline : none;
+  border : none;
+}
+
+#popup1 .setTime > div > img{
+  width : 26px;
+  height : 28px;
+  margin : auto 20px;
+}
+
+#popup1 .timeWrapper{
+  padding : 10px 0;
+}
+
+#popup1 .timeWrapper > div:nth-child(1){
+  font-size : 10px;
+}
+
+#popup1 .timeWrapper .number{
+  font-size : 22px;
+  color : rgb(38, 153, 251);
+}
+
+#popup1 .timeWrapper span{
+  font-size : 12px;
+  color : rgba(255, 0 ,0, 0.6);
+}
+
+#popup1 .timeWrapper .number2{
+  font-size : 22px;
+  color : rgba(0,0,0,0.4);
+}
+
+#popup1 .buttonContainer{
+  display : flex;
+  flex-direction: row;
+}
+
+#popup1 .buttonContainer button:nth-child(1){
+  background-color : rgb(38, 153, 251);
+  color : #fff;
+  height : 40px;
+  flex : 1;
+  margin-right : 10px;
+}
+
+#popup1 .buttonContainer button:nth-child(2){
+  background-color : rgb(85, 83, 83);
+  color : #fff;
+  width : 80px;
+}
+
+#popup2{
+  width : 650px;
+  height : 800px;
+  left : 730px;
+  top : 78px;
+}
+
+
+/*---------------popup design end-------------*/
+header .bottom{
+  border-top : 1px solid rgb(10, 228, 18);
+}
+
+header .bottom > button{
+  width : 185px;
+  height : 38px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin : 10px;
+  outline : none;
+  border : 1px solid rgba(0,0,0,0.3);
+  background-color : #fff;
+  display : flex;
+  flex-direction: row;
+  align-items : center;
+  cursor : pointer;
+}
+
+header .bottom > button > span{
+  display : inline-block;
+  width : 20px;
+  height : 20px;
+  background-color : rgba(0,0,0,0.2);
+}
+
+header .bottom > button > div{
+  display : inline-block;
+  margin : 0 auto;
+}
+
+header .bottom > button:nth-child(2){
+  margin-right : 180px;
+}
+
+header .bottom > button:nth-child(3){
+  margin : auto auto;
+}
+/*--------- table ---------*/
+
+table{
+  border-spacing : 0;
+  width : 100%;
+}
+
+table td{
+  height : 45px;
+}
+
+.table-body{
+  color : #303030;
+  font-size : 15px;
+}
+
+/*--------section 1---------*/
+
+.item_container .table-header{
+  background-color : rgb(123, 184, 126);
+  color : #fff;
+}
+
+.item_container .even{
+  background-color : rgb(229, 245, 249);
+}
+
+.item_container tr > td:nth-child(1){width : 600px;padding-left : 10px;}
+.item_container tr > td:nth-child(2){width : 150px; text-align : center;}
+.item_container tr > td:nth-child(3){width : 600px;}
+.item_container tr > td:nth-child(4){width : 150px;}
+.item_container tr > td:nth-child(5){width : 300px;}
+
+/*-------section 2-------*/
+
+.order_container .table-header{
+  background-color : rgb(222, 181, 139);
+  color : #fff;
+}
+
+.order_container .even{
+  background-color : rgb(249, 242, 229);
+}
+
+.order_container tr > td:nth-child(1){width : 100px;text-align : center;}
+.order_container tr > td:nth-child(2){width : 200px;}
+.order_container tr > td:nth-child(3){width : 100px;text-align : right;}
+.order_container tr > td:nth-child(4){width : 100px;text-align : right;}
+.order_container tr > td:nth-child(5){width : 150px;text-align : center;}
+.order_container tr > td:nth-child(6){width : 100px;text-align : center;}
+.order_container tr > td:nth-child(7){width : 200px;text-align : left;}
+.order_container tr > td:nth-child(8){width : 100px;text-align : center;}
+.order_container tr > td:nth-child(9){width : 500px;}
+.order_container tr > td:nth-child(10){width : 300px;}

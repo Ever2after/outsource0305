@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./design.css">
+    <title></title>
+    <script type="text/javascript">
+      function func1(){
+        var style = document.getElementById('popup1').style.display;
+        if(style==="none") document.getElementById('popup1').style.display="block";
+        else document.getElementById('popup1').style.display="none";
+      }
+      function func2(){
+        var style = document.getElementById('popup2').style.display;
+        if(style==="none") document.getElementById('popup2').style.display="block";
+        else document.getElementById('popup2').style.display="none";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div>
+          <label>접수일</label>
+          <input readOnly value="20-10-31"/>
+        </div>
+        <div>
+          <label>No</label>
+          <input readOnly value="001"/>
+        </div>
+        <div>
+          <label></label>
+          <input value="주식회사한국어택"/>
+        </div>
+        <div>
+          <label>건수</label>
+          <input readOnly value="001"/>
+        </div>
+
+        <div class="pointer" onClick="func1()">
+          <label>시공일</label>
+          <input readOnly value="20-11-07"/>
+        </div>
+        <div class="pointer" onClick="func1()">
+          <label>현장명</label>
+          <input readOnly value="고객님댁"/>
+        </div>
+
+        <div class="wrapper pointer" onClick="func2()">
+          <div>
+            <label>배송</label>
+            <input readOnly value="화물"/>
+          </div>
+          <div>
+            <label>도착지</label>
+            <input readOnly value="대신화물 동서울지점"/>
+          </div>
+        </div>
+
+        <div>
+          <label>비고</label>
+          <input value="안전한 포장부탁합니다"/>
+        </div>
+
+        <!--------popup1------->
+        <div style="display : none" id="popup1">
+          <div class="">
+            <div class="">
+              <label>시공주</label>
+              <input type="text" name="" value="박정순사모님">
+            </div>
+            <div class="">
+              <label>연락처</label>
+              <input type="text" name="" value="010-6381-2233">
+            </div>
+          </div>
+          <div class="">
+            <label>고객주소</label>
+            <input type="text" name="" value="강원도 원주시 무실동 무실2 105-1">
+          </div>
+          <div class="">
+            <div class="">
+              <label>상세주소</label>
+              <input type="text" name="" value="202호">
+            </div>
+            <button>주소 찾기</button>
+          </div>
+          <div class="">
+            <div class="">
+              <label>현장명</label>
+              <input type="text" name="" value="고객님댁">
+            </div>
+            <button>상기주소</button>
+          </div>
+          <div class="">
+            <label>현장주소</label>
+            <input type="text" name="" value="강원도 원주시 무실동 무실2 105-1">
+          </div>
+          <div class="">
+            <div class="">
+              <label>상세주소</label>
+              <input type="text" name="" value="202호">
+            </div>
+            <button>주소찾기</button>
+          </div>
+          <div class="setTime">
+            <div class="">
+              <button><img src="./assets/4.png" alt=""></button>
+              <img src="./assets/6.png" alt="">
+              <div class="timeWrapper">
+                <div>시공예약</div>
+                <div>
+                  <span class="number">2021</span><span>년</span>
+                  <span class="number">01</span><span>월</span>
+                  <span class="number">21</span><span>일</span>
+                  <span class="number">11</span><span>시</span>
+                  <span class="number">20</span><span>분</span>
+                  <span class="number">오전</span>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <button><img src="./assets/5.png" alt=""></button>
+              <img src="./assets/7.png" alt="">
+              <div class="timeWrapper">
+                <div>시공예약</div>
+                <div>
+                  <span class="number2">2021</span><span>년</span>
+                  <span class="number2">01</span><span>월</span>
+                  <span class="number2">21</span><span>일</span>
+                  <span class="number2">11</span><span>시</span>
+                  <span class="number2">20</span><span>분</span>
+                  <span class="number2">오전</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button>확인</button>
+            <button>취소</button>
+          </div>
+        </div>
+        <!--------popup1 end-------->
+
+        <!--------popup2------->
+        <div style="display : none" id="popup2">
+          하위헌수2
+        </div>
+        <!--------popup2 end-------->
+      </div>
+
+      <div class="middle">
+        <div class="wrapper">
+          <div>
+            <label>상품선택</label>
+            <input value="블라인드"/>
+          </div>
+          <div>
+            <label>상품명</label>
+            <input value="PR투웨이"/>
+          </div>
+          <div>
+            <label>상품명</label>
+            <input value="01-화이트아이보리"/>
+          </div>
+          <div>
+            <label>가공상태</label>
+            <input value="01-선염/방염"/>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div>
+            <label>가로</label>
+            <input value="150.0"/>
+          </div>
+          <div>
+            <label>세로</label>
+            <input value="130.0"/>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div>
+            <label>시스템</label>
+            <input value="전동형"/>
+          </div>
+          <div>
+            <label>모터</label>
+            <input value="솜피모터"/>
+          </div>
+          <div>
+            <label>리모콘</label>
+            <input value="8ch 2개"/>
+          </div>
+          <div>
+            <label>하단바</label>
+            <input value="반달하단"/>
+          </div>
+          <div>
+            <label>커버</label>
+            <input value="알미늄"/>
+          </div>
+          <div>
+            <label>커버칼라</label>
+            <input value="화이트아이보리"/>
+          </div>
+        </div>
+        <div>
+          <label></label>
+          <input value="시공-ID"/>
+        </div>
+        <div>
+          <label></label>
+          <input value="비고"/>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <button><span></span><div>초기화</div></button>
+        <button><span></span><div>검색</div></button>
+        <button><span></span><div>주문등록</div></button>
+        <button><span></span><div>추가</div></button>
+        <button><span></span><div>수정</div></button>
+        <button><span></span><div>삭제</div></button>
+      </div>
+
+    </header>
+
+    <section class="item_container">
+      <table>
+        <tr class="table-header">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+
+        <tr class="table-body odd">
+          <td>PR투웨이 01-다크아이보리 01-후염/방염-OK/암막-Blackout-5%</td>
+          <td>150.0 X 180.0</td>
+          <td>점보형 방향-좌 커버-논커버 줄길이-120.0 마킹-OK</td>
+          <td>침실_1A_1</td>
+          <td>커튼박스작음</td>
+        </tr>
+        <tr class="table-body even">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body odd">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body even">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body odd">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body even">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body odd">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body even">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+        <tr class="table-body odd">
+          <td>상품명</td>
+          <td>사이즈</td>
+          <td>시스템명</td>
+          <td>시공-ID</td>
+          <td>비고</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="order_container">
+      <table>
+        <tr class="table-header">
+          <td>주문일</td>
+          <td>거래처명</td>
+          <td>건수</td>
+          <td>금액</td>
+          <td>주문번호</td>
+          <td>상태</td>
+          <td>현장명</td>
+          <td>시공일</td>
+          <td>출고</td>
+          <td>비고</td>
+        </tr>
+
+        <tr class="table-body odd">
+          <td>20-10-01</td>
+          <td>주식회가안</td>
+          <td>3</td>
+          <td>34,500</td>
+          <td>2010010001</td>
+          <td>대기</td>
+          <td>이종원팀장님댁</td>
+          <td>20-10-03</td>
+          <td>화물-대신화물 동서울지점</td>
+          <td>포장 튼튼하게 부탁해요</td>
+        </tr>
+
+        <tr class="table-body even">
+          <td>주문일</td>
+          <td>거래처명</td>
+          <td>건수</td>
+          <td>금액</td>
+          <td>주문번호</td>
+          <td>상태</td>
+          <td>현장명</td>
+          <td>시공일</td>
+          <td>출고</td>
+          <td>비고</td>
+        </tr>
+
+        <tr class="table-body odd">
+          <td>주문일</td>
+          <td>거래처명</td>
+          <td>건수</td>
+          <td>금액</td>
+          <td>주문번호</td>
+          <td>상태</td>
+          <td>현장명</td>
+          <td>시공일</td>
+          <td>출고</td>
+          <td>비고</td>
+        </tr>
+
+        <tr class="table-body even">
+          <td>주문일</td>
+          <td>거래처명</td>
+          <td>건수</td>
+          <td>금액</td>
+          <td>주문번호</td>
+          <td>상태</td>
+          <td>현장명</td>
+          <td>시공일</td>
+          <td>출고</td>
+          <td>비고</td>
+        </tr>
+
+        <tr class="table-body odd">
+          <td>주문일</td>
+          <td>거래처명</td>
+          <td>건수</td>
+          <td>금액</td>
+          <td>주문번호</td>
+          <td>상태</td>
+          <td>현장명</td>
+          <td>시공일</td>
+          <td>출고</td>
+          <td>비고</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
