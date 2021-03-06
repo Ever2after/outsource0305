@@ -474,6 +474,7 @@ header .middle > div:nth-child(5){width : 350px;}
   color : #fff;
   height : 40px;
   border-radius: 5px;
+  cursor : pointer;
 }
 
 #popup2 .buttonContainer > button:nth-child(1){
