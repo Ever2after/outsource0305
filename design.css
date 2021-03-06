@@ -1,3 +1,7 @@
+body{
+  margin : 0;
+}
+
 /*---------- header ----------*/
 header .top, header .middle, header .bottom{
   display : flex;
@@ -33,7 +37,7 @@ header .top > div, header .middle > div{
 
 header .top > div > label{
   position : absolute;
-  top : 25px;
+  top : 17px;
   margin-left : 10px;
   background-color : rgb(236, 251, 232);
   font-size : 11px;
@@ -41,7 +45,7 @@ header .top > div > label{
 
  header .middle > div > label{
    position : absolute;
-   top : 97px;
+   top : 89px;
    margin-left : 10px;
    background-color : #fff;
    font-size : 11px;
@@ -82,14 +86,14 @@ header .wrapper input{
 
 header .wrapper label{
   position : absolute;
-  top : 25px;
+  top : 17px;
   margin-left : 10px;
   background-color : rgb(236, 251, 232);
   font-size : 11px;
 }
 
 header .middle .wrapper label{
-  top : 97px;
+  top : 89px;
   background-color : #fff;
 }
 
@@ -137,7 +141,7 @@ header .middle > div:nth-child(5){width : 350px;}
 #popup1{
   width : 615px;
   left : 160px;
-  top : 75px;
+  top : 67px;
   padding : 40px 70px;
 }
 
@@ -251,11 +255,76 @@ header .middle > div:nth-child(5){width : 350px;}
   height : 40px;
   flex : 1;
   margin-right : 10px;
+  border : none;
 }
 
 #popup1 .buttonContainer button:nth-child(2){
   background-color : rgb(85, 83, 83);
   color : #fff;
+  width : 80px;
+  border :none;
+}
+
+#popup1_1, #popup1_2{
+  position : absolute;
+  width : 400px;
+  background-color : rgb(242, 247, 251);
+  top : 460px;
+  margin-left : 10px;
+  border-radius: 5px;
+  padding : 30px 20px;
+  font-size : 24px;
+  text-align : center;
+  border : 1px solid black;
+  transition : .3s;
+}
+
+#popup1_2{
+  top : 530px;
+}
+
+.daySelector > div:nth-child(1){
+  padding-bottom : 20px;
+  border-bottom : 1px solid rgb(38, 153, 251);
+}
+
+.daySelector .number{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.daySelector .number > span{
+  display : inline-block;
+  padding : 15px 10px;
+  color : #afafaf;
+}
+
+.daySelector .number:nth-child(3) > span{
+  border-top : 1px solid rgb(38, 153, 251);
+  border-bottom : 1px solid rgb(38, 153, 251);
+  color : red;
+}
+
+.daySelector .buttonContainer{
+  display : flex;
+  margin-top : 20px;
+}
+
+.daySelector .buttonContainer button{
+  color : #fff;
+  border-radius: 5px;
+  cursor : pointer;
+}
+
+.daySelector .buttonContainer > button:nth-child(1){
+  background-color : rgb(251, 120, 120);
+  flex : 1;
+  margin-right : 10px;
+}
+
+.daySelector .buttonContainer > button:nth-child(2){
+  background-color : rgb(85, 83, 83);
   width : 80px;
 }
 
@@ -263,9 +332,160 @@ header .middle > div:nth-child(5){width : 350px;}
   width : 650px;
   height : 800px;
   left : 730px;
-  top : 78px;
+  top : 70px;
+  padding : 10px 105px;
 }
 
+#popup2 .selectType{
+  display : flex;
+  justify-content: space-between;
+  width : 100%;
+  margin-bottom : 10px;
+}
+
+#popup2 .selectType > button{
+  box-sizing: border-box;
+  border-radius : 0;
+  width : 80px;
+  height : 80px;
+  background-color : #fff;
+  outline : none;
+  border : 1px solid #cccccc;
+  cursor : pointer;
+}
+
+#popup2 .selectType .select{
+  border : 2px solid rgb(38, 153, 251);
+  color : rgb(38, 153, 251);
+}
+
+#popup2 .defaultInfo{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height : 140px;
+  font-size : 14px;
+  margin-bottom : 20px;
+  color : #aaaaaa;
+}
+
+#popup2 .defaultInfo > div:nth-child(1){
+  width : 35px;
+  box-sizing: border-box;
+  display : flex;
+  align-items: center;
+  padding : 0 10px;
+  border : 1px solid #aaaaaa;
+  border-radius: 5px;
+  margin-right : 15px;
+}
+
+#popup2 .defaultInfo > div:nth-child(2){
+  width : 100%;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding : 10px 20px;
+  border : 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+
+#popup2 .mainInfo{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size : 14px;
+  height : 450px;
+}
+
+#popup2 .mainInfo > div:nth-child(1){
+  width : 35px;
+  box-sizing: border-box;
+  display : flex;
+  align-items: center;
+  padding : 0 10px;
+  border : 1px solid rgb(20, 84, 235);
+  border-radius: 5px;
+  margin-right : 15px;
+  background-color : rgb(156, 184, 241);
+  line-height : 26px;
+}
+
+#popup2 .mainInfo > div:nth-child(2){
+  width : 100%;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+#popup2 .mainInfo > div > div{
+  height : 35px;
+  width : 100%;
+  margin : 10px 0;
+}
+
+#popup2 .mainInfo > div > div > label{
+  position : absolute;
+  font-size : 10px;
+  margin-left : 10px;
+  margin-top : -7px;
+  background-color : #fff;
+}
+
+#popup2 .mainInfo > div > div > input{
+  box-sizing: border-box;
+  width : 100%;
+  border-radius: 5px;
+  height : 35px;
+  outline : none;
+  border : 1px solid #aaaaaa;
+  padding : 10px;
+  font-size : 16px;
+}
+
+#popup2 .mainInfo .last{
+  flex : 1;
+}
+
+#popup2 .mainInfo .last textarea{
+  box-sizing: border-box;
+  height : 100%;
+  width : 100%;
+  outline : none;
+  border-radius: 5px;
+  font-size : 16px;
+  padding : 10px;
+  font-family: inherit;
+  border : 1px solid #aaaaaa;
+}
+
+#popup2 .buttonContainer{
+  margin-top : 10px;
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#popup2 .buttonContainer > button{
+  outline : none;
+  border : none;
+  color : #fff;
+  height : 40px;
+  border-radius: 5px;
+}
+
+#popup2 .buttonContainer > button:nth-child(1){
+  flex : 1;
+  background-color : rgb(38, 153, 251);
+  margin-right : 20px;
+}
+
+#popup2 .buttonContainer > button:nth-child(2){
+  background-color :  rgb(85, 83, 83);
+  width : 80px;
+}
 
 /*---------------popup design end-------------*/
 header .bottom{

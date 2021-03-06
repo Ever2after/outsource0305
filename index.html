@@ -15,6 +15,31 @@
         if(style==="none") document.getElementById('popup2').style.display="block";
         else document.getElementById('popup2').style.display="none";
       }
+      function func3(){
+        document.getElementById('popup1_1').style.display = "block";
+      }
+      function func4(){
+        document.getElementById('popup1_1').style.display = "none";
+      }
+      function func5(){
+        document.getElementById('popup1_2').style.display = "block";
+      }
+      function func6(){
+        document.getElementById('popup1_2').style.display = "none";
+      }
+      function changeType(type){
+        var els = document.getElementsByClassName('typeButton');
+        for(var el of els){
+          if(el.innerText===type) {
+            el.classList.add('select');
+            document.getElementById(el.innerText).style.display = 'flex';
+          }
+          else {
+            el.classList.remove('select');
+            document.getElementById(el.innerText).style.display = 'none';
+          }
+        }
+      }
     </script>
   </head>
   <body>
@@ -62,7 +87,8 @@
           <input value="안전한 포장부탁합니다"/>
         </div>
 
-        <!--------popup1------->
+        <!---------- popup1------->
+
         <div style="display : none" id="popup1">
           <div class="">
             <div class="">
@@ -105,7 +131,44 @@
           </div>
           <div class="setTime">
             <div class="">
-              <button><img src="./assets/4.png" alt=""></button>
+              <button id="button1" onmouseover="func3()" onmouseout="func4()">
+                <img src="./assets/4.png" alt="">
+              </button>
+
+              <div class="daySelector" id="popup1_1" onmouseover="func3()" onmouseout="func4()" style="display : none">
+                <div class="">
+                  2021년 01월 21일 (목) 11시 20분
+                </div>
+                <div class="number">
+                  <span>2020</span>
+                  <span>12</span>
+                  <span>20</span>
+                  <span>10</span>
+                  <span>15</span>
+                  <span>오후</span>
+                </div>
+                <div class="number">
+                  <span>2021</span>
+                  <span>01</span>
+                  <span>21</span>
+                  <span>11</span>
+                  <span>20</span>
+                  <span>오전</span>
+                </div>
+                <div class="number">
+                  <span>2021</span>
+                  <span>02</span>
+                  <span>22</span>
+                  <span>12</span>
+                  <span>25</span>
+                  <span>오후</span>
+                </div>
+                <div class="buttonContainer">
+                  <button>확인</button>
+                  <button>취소</button>
+                </div>
+              </div>
+
               <img src="./assets/6.png" alt="">
               <div class="timeWrapper">
                 <div>시공예약</div>
@@ -120,7 +183,42 @@
               </div>
             </div>
             <div class="">
-              <button><img src="./assets/5.png" alt=""></button>
+              <button id="button2" onmouseover="func5()" onmouseout="func6()">
+                <img src="./assets/5.png" alt="">
+              </button>
+              <div class="daySelector" id="popup1_2" onmouseover="func5()" onmouseout="func6()" style="display : none">
+                <div class="">
+                  2021년 01월 21일 (목) 11시 20분
+                </div>
+                <div class="number">
+                  <span>2020</span>
+                  <span>12</span>
+                  <span>20</span>
+                  <span>10</span>
+                  <span>15</span>
+                  <span>오후</span>
+                </div>
+                <div class="number">
+                  <span>2021</span>
+                  <span>01</span>
+                  <span>21</span>
+                  <span>11</span>
+                  <span>20</span>
+                  <span>오전</span>
+                </div>
+                <div class="number">
+                  <span>2021</span>
+                  <span>02</span>
+                  <span>22</span>
+                  <span>12</span>
+                  <span>25</span>
+                  <span>오후</span>
+                </div>
+                <div class="buttonContainer">
+                  <button>확인</button>
+                  <button>취소</button>
+                </div>
+              </div>
               <img src="./assets/7.png" alt="">
               <div class="timeWrapper">
                 <div>시공예약</div>
@@ -144,7 +242,155 @@
 
         <!--------popup2------->
         <div style="display : none" id="popup2">
-          하위헌수2
+          <div class="selectType">
+            <button class="typeButton select" onClick="changeType('화물')">화물</button>
+            <button class="typeButton" onClick="changeType('택배')">택배</button>
+            <button class="typeButton" onClick="changeType('직출')">직출</button>
+            <button class="typeButton" onClick="changeType('퀵송')">퀵송</button>
+            <button class="typeButton" onClick="changeType('수하물')">수하물</button>
+          </div>
+          <div class="defaultInfo">
+            <div>기본정보</div>
+            <div class="">
+              <span>수신 : 주식회사가안 이종원 대표님</span>
+              <span>전화 : 010-4345-6900</span>
+              <span>주소 : 강원도 원주 학성 230-1번지 삼성빌딩 302호</span>
+              <span>비고 : 010-5678-9000^^</span>
+            </div>
+          </div>
+          <div id="화물" class="mainInfo" style="display : flex">
+              <div>임시화물정보</div>
+              <div class="">
+                <div class="">
+                  <label for="">화물지점</label>
+                  <input type="text" name="" value="대신화 동원주지점">
+                </div>
+                <div class="">
+                  <label for="">지점연락처</label>
+                  <input type="text" name="" value="033-2343-9000">
+                </div>
+                <div class="">
+                  <label for="">지점주소</label>
+                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
+                </div>
+                <div class="">
+                  <label for="">상세주소</label>
+                  <input type="text" name="" value="304호">
+                </div>
+                <div>
+                  <input type="text" name="" placeholder="운송비 지급">
+                </div>
+                <div class="last">
+                  <label for="">기타사항</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+          </div>
+          <div id="택배" class="mainInfo" style="display : none">
+              <div>임시택배정보</div>
+              <div class="">
+                <div class="">
+                  <label for="">택배수신자</label>
+                  <input type="text" name="" value="대신화 동원주지점">
+                </div>
+                <div class="">
+                  <label for="">수신자전화</label>
+                  <input type="text" name="" value="033-2343-9000">
+                </div>
+                <div class="">
+                  <label for="">수신주소</label>
+                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
+                </div>
+                <div class="">
+                  <label for="">상세주소</label>
+                  <input type="text" name="" value="304호">
+                </div>
+                <div>
+                  <input type="text" name="" placeholder="운송비 지급">
+                </div>
+                <div class="last">
+                  <label for="">기타사항</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+          </div>
+          <div id="직출" class="mainInfo" style="display : none">
+              <div>임시화물정보</div>
+              <div class="">
+                <div class="">
+                  <label for="">직출자</label>
+                  <input type="text" name="" value="주식회사 아름다운 박정훈 대리">
+                </div>
+                <div class="">
+                  <label for="">직출자연락처</label>
+                  <input type="text" name="" value="010-343-9000">
+                </div>
+                <div class="">
+                  <label for="">차량번호</label>
+                  <input type="text" name="" value="34자 3456 렉스턴">
+                </div>
+                <div class="last">
+                  <label for="">기타사항</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+          </div>
+          <div id="퀵송" class="mainInfo" style="display : none">
+              <div>임시화물정보</div>
+              <div class="">
+                <div class="">
+                  <label for="">운송기사</label>
+                  <input type="text" name="" value="대신화물 동원주지점">
+                </div>
+                <div class="">
+                  <label for="">운송기사연락처</label>
+                  <input type="text" name="" value="033-2343-9000">
+                </div>
+                <div class="">
+                  <label for="">차량번호</label>
+                  <input type="text" name="" value="45가 3435오토바이">
+                </div>
+                <div>
+                  <input type="text" name="" placeholder="운송비 지급">
+                </div>
+                <div class="last">
+                  <label for="">기타사항</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+          </div>
+          <div id="수하물" class="mainInfo" style="display : none">
+              <div>임시화물정보</div>
+              <div class="">
+                <div class="">
+                  <label for="">화물지점</label>
+                  <input type="text" name="" value="대신화물 동원주지점">
+                </div>
+                <div class="">
+                  <label for="">지점연락처</label>
+                  <input type="text" name="" value="033-2343-9000">
+                </div>
+                <div class="">
+                  <label for="">지점주소</label>
+                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
+                </div>
+                <div class="">
+                  <label for="">상세주소</label>
+                  <input type="text" name="" value="304호">
+                </div>
+                <div>
+                  <input type="text" name="" placeholder="운송비 지급">
+                </div>
+                <div class="last">
+                  <label for="">기타사항</label>
+                  <textarea></textarea>
+                </div>
+              </div>
+          </div>
+          <div class="buttonContainer">
+              <button type="button">확인</button>
+              <button type="button">취소</button>
+          </div>
         </div>
         <!--------popup2 end-------->
       </div>
