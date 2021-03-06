@@ -97,6 +97,18 @@ header .middle .wrapper label{
   background-color : #fff;
 }
 
+header .middle select, header .middle button{
+  outline : none;
+  box-sizing: border-box;
+  border : none;
+  height : 33px;
+  font-size : 15px;
+  width : 100%;
+  padding-left : 5px;
+  background-color : #fff;
+  cursor : pointer;
+}
+
 header .top > div:nth-child(1){width : 90px;}
 header .top > div:nth-child(2){width : 45px;}
 header .top > div:nth-child(3){width : 165px;}
@@ -109,7 +121,7 @@ header .top .wrapper > div:nth-child(1){width : 85px;}
 header .top .wrapper > div:nth-child(2){width : 100%;}
 
 header .middle .wrapper:nth-child(1){width : 590px;}
-header .middle .wrapper:nth-child(1) > div:nth-child(1){width : 85px;}
+header .middle .wrapper:nth-child(1) > div:nth-child(1){width : 100px;}
 header .middle .wrapper:nth-child(1) > div:nth-child(2){width : 85px;}
 header .middle .wrapper:nth-child(1) > div:nth-child(3){width : 150px;}
 header .middle .wrapper:nth-child(1) > div:nth-child(4){width : 270px;}

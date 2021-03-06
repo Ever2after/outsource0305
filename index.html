@@ -40,6 +40,33 @@
           }
         }
       }
+      function onChange(e){
+        console.log(e.value);
+      }
+      function onChange2(e){
+        if(e.value==="기본형"){
+          var els = document.getElementsByClassName('system');
+          for(var el of els) el.style.display = "none";
+          els = document.getElementsByClassName('system1');
+          for(var el of els) el.style.display = "block";
+        }
+        else{
+          var els = document.getElementsByClassName('system');
+          for(var el of els) el.style.display = "none";
+          els = document.getElementsByClassName('system2');
+          for(var el of els) el.style.display = "block";
+        }
+      }
+      function onClick1(){
+        var els = document.getElementsByClassName('choice');
+        for(var el of els) el.style.display = "none";
+        els = document.getElementsByClassName('choice1');
+        for(var el of els) el.style.display = "block";
+        els = document.getElementsByClassName('system');
+        for(var el of els) el.style.display = "none";
+        els = document.getElementsByClassName('system1');
+        for(var el of els) el.style.display = "block";
+      }
     </script>
   </head>
   <body>
@@ -399,17 +426,28 @@
         <div class="wrapper">
           <div>
             <label>상품선택</label>
-            <input value="블라인드"/>
+            <button class="choice" onClick="onClick1()">상품선택</button>
+            <select class="choice1" style="display : none">
+              <option>블라인드</option>
+              <option>커튼</option>
+              <option>가구</option>
+              <option>인테리어</option>
+            </select>
           </div>
-          <div>
+          <div class="select choice1" style="display : none">
             <label>상품명</label>
-            <input value="PR투웨이"/>
+            <select onChange="onChange(this)">
+              <option>option1</option>
+              <option>option2</option>
+              <option>option3</option>
+              <option>option4</option>
+            </select>
           </div>
-          <div>
+          <div class="choice1" style="display : none">
             <label>상품명</label>
             <input value="01-화이트아이보리"/>
           </div>
-          <div>
+          <div class="choice1" style="display : none">
             <label>가공상태</label>
             <input value="01-선염/방염"/>
           </div>
@@ -425,27 +463,46 @@
           </div>
         </div>
         <div class="wrapper">
-          <div>
-            <label>시스템</label>
-            <input value="전동형"/>
+          <div class="choice">
+            <input value="시스템 선택" readOnly/>
           </div>
-          <div>
+          <div class="choice1" style="display : none">
+            <label>시스템</label>
+            <select onChange="onChange2(this)">
+              <option>기본형</option>
+              <option>울트라</option>
+              <option>전동형</option>
+            </select>
+          </div>
+          <div class="choice1 system system1" style="display : none">
+            <label>방향</label>
+            <input value="좌"/>
+          </div>
+          <div class="choice1 system system1" style="display : none">
+            <label>손잡이</label>
+            <input value="프라스틱"/>
+          </div>
+          <div class="choice1 system system1" style="display : none">
+            <label>코드줄</label>
+            <input value="일반코드"/>
+          </div>
+          <div class="choice1 system system2" style="display : none">
             <label>모터</label>
             <input value="솜피모터"/>
           </div>
-          <div>
+          <div class="choice1 system system2" style="display : none">
             <label>리모콘</label>
             <input value="8ch 2개"/>
           </div>
-          <div>
+          <div class="choice1 system system1 system2" style="display : none">
             <label>하단바</label>
             <input value="반달하단"/>
           </div>
-          <div>
+          <div class="choice1 system system1 system2" style="display : none">
             <label>커버</label>
             <input value="알미늄"/>
           </div>
-          <div>
+          <div class="choice1 system system2" style="display : none">
             <label>커버칼라</label>
             <input value="화이트아이보리"/>
           </div>
