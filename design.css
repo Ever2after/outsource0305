@@ -621,7 +621,7 @@ table td{
   color : black;
 }
 
-#outBox1 label{
+#outBox1 label, #outBox3 label{
   color : black;
 }
 

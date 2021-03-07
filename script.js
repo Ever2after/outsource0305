@@ -1,10 +1,12 @@
 function myFunc(){
-  
+
   //Javascript
   var inputdrop1 = document.getElementById('inputdrop1');
   var inputdrop2 = document.getElementById('inputdrop2');
+  var inputdrop3 = document.getElementById('inputdrop3');
   var dropdown1 = document.getElementById('dropdown1');
   var dropdown2 = document.getElementById('dropdown2');
+  var dropdown3 = document.getElementById('dropdown3');
   inputdrop1.addEventListener('focus', function(){
     dropdown1.style.display = "block";
   });
@@ -17,6 +19,13 @@ function myFunc(){
   });
   inputdrop2.addEventListener('blur', function(){
     setTimeout(()=>{dropdown2.style.display = "none";}, 100);
+  });
+
+  inputdrop3.addEventListener('focus', function(){
+    dropdown3.style.display = "block";
+  });
+  inputdrop3.addEventListener('blur', function(){
+    setTimeout(()=>{dropdown3.style.display = "none";}, 100);
   });
 }
 
@@ -47,39 +56,47 @@ function changeType(type){
     }
   }
 }
-function onChange1(e){}
-function onChange2(e){
-    if(e.value==="기본형"){
-    var els = document.getElementsByClassName('system');
-    for(var el of els) el.style.display = "none";
-    els = document.getElementsByClassName('system1');
-    for(var el of els) el.style.display = "block";
-  }
-  else{
-    var els = document.getElementsByClassName('system');
-    for(var el of els) el.style.display = "none";
-    els = document.getElementsByClassName('system2');
-    for(var el of els) el.style.display = "block";
-  }
-}
-function onClick1(){
-  var els = document.getElementsByClassName('choice');
-  for(var el of els) el.style.display = "none";
-  els = document.getElementsByClassName('choice1');
-  for(var el of els) el.style.display = "block";
-  els = document.getElementsByClassName('system');
-  for(var el of els) el.style.display = "none";
-  els = document.getElementsByClassName('system1');
+
+function showItemOption(){
+  var els = document.getElementsByClassName('itemoption');
   for(var el of els) el.style.display = "block";
 }
+
 function onClick2(e){
   var target = document.getElementById('inputdrop1');
   target.value = e.innerText;
-  var loginBox = document.getElementById('outBox1');
-  loginBox.classList.add('existence');
-  onClick1();
+  showItemOption();
 }
+
 function onClick3(e){
   var target = document.getElementById('inputdrop2');
   target.value = e.innerText;
+}
+
+function showSystemOption(){
+  var els = document.getElementsByClassName('systemoption');
+  for(var el of els) el.style.display = "block";
+}
+
+function showSystemOption1(){
+  var els = document.getElementsByClassName('systemoption');
+  for(var el of els) el.style.display = "none";
+  els = document.getElementsByClassName('systemoption1');
+  for(var el of els) el.style.display = "block";
+}
+
+function showSystemOption2(){
+  var els = document.getElementsByClassName('systemoption');
+  for(var el of els) el.style.display = "none";
+  els = document.getElementsByClassName('systemoption2');
+  for(var el of els) el.style.display = "block";
+}
+
+function onClick4(e){
+  var target = document.getElementById('inputdrop3');
+  target.value = e.innerText;
+  showSystemOption();
+  // 옵션에 따라 보여지는 항목 달리 
+  if(e.innerText==='기본형') showSystemOption1();
+  else showSystemOption2();
 }
