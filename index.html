@@ -4,155 +4,108 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./design.css">
     <title></title>
-    <script type="text/javascript">
-      function func1(){
-        var style = document.getElementById('popup1').style.display;
-        if(style==="none") document.getElementById('popup1').style.display="block";
-        else document.getElementById('popup1').style.display="none";
-      }
-      function func2(){
-        var style = document.getElementById('popup2').style.display;
-        if(style==="none") document.getElementById('popup2').style.display="block";
-        else document.getElementById('popup2').style.display="none";
-      }
-      function func3(){
-        document.getElementById('popup1_1').style.display = "block";
-      }
-      function func4(){
-        document.getElementById('popup1_1').style.display = "none";
-      }
-      function func5(){
-        document.getElementById('popup1_2').style.display = "block";
-      }
-      function func6(){
-        document.getElementById('popup1_2').style.display = "none";
-      }
-      function changeType(type){
-        var els = document.getElementsByClassName('typeButton');
-        for(var el of els){
-          if(el.innerText===type) {
-            el.classList.add('select');
-            document.getElementById(el.innerText).style.display = 'flex';
-          }
-          else {
-            el.classList.remove('select');
-            document.getElementById(el.innerText).style.display = 'none';
-          }
-        }
-      }
-      function onChange(e){
-        console.log(e.value);
-      }
-      function onChange2(e){
-        if(e.value==="기본형"){
-          var els = document.getElementsByClassName('system');
-          for(var el of els) el.style.display = "none";
-          els = document.getElementsByClassName('system1');
-          for(var el of els) el.style.display = "block";
-        }
-        else{
-          var els = document.getElementsByClassName('system');
-          for(var el of els) el.style.display = "none";
-          els = document.getElementsByClassName('system2');
-          for(var el of els) el.style.display = "block";
-        }
-      }
-      function onClick1(){
-        var els = document.getElementsByClassName('choice');
-        for(var el of els) el.style.display = "none";
-        els = document.getElementsByClassName('choice1');
-        for(var el of els) el.style.display = "block";
-        els = document.getElementsByClassName('system');
-        for(var el of els) el.style.display = "none";
-        els = document.getElementsByClassName('system1');
-        for(var el of els) el.style.display = "block";
-      }
-    </script>
+    <script type="text/javascript" src="./script.js"></script>
   </head>
-  <body>
+  <body onload="myFunc()">
     <header>
       <div class="top">
-        <div>
-          <label>접수일</label>
+        <div class="outBox existence">
           <input readOnly value="20-10-31"/>
+          <label>접수일</label>
+
         </div>
-        <div>
+        <div class="outBox existence">
+          <input readOnly value="001"/>
           <label>No</label>
+
+        </div>
+        <div class="outBox">
+          <input value="" placeholder="default" />
+          <label>주문거래처</label>
+
+        </div>
+        <div class="outBox existence">
           <input readOnly value="001"/>
-        </div>
-        <div>
-          <label></label>
-          <input value="주식회사한국어택"/>
-        </div>
-        <div>
           <label>건수</label>
-          <input readOnly value="001"/>
+
         </div>
 
-        <div class="pointer" onClick="func1()">
+        <div class="pointer outBox" onClick="func1()">
+          <input value="" placeholder="default"  readOnly />
           <label>시공일</label>
-          <input readOnly value="20-11-07"/>
+
         </div>
-        <div class="pointer" onClick="func1()">
+        <div class="pointer outBox" onClick="func1()">
+          <input value="" placeholder="default"  readOnly />
           <label>현장명</label>
-          <input readOnly value="고객님댁"/>
+
         </div>
 
         <div class="wrapper pointer" onClick="func2()">
-          <div>
+          <div class="outBox">
+            <input value="" placeholder="default"  readOnly />
             <label>배송</label>
-            <input readOnly value="화물"/>
+
           </div>
-          <div>
+          <div class="outBox">
+            <input value="" placeholder="default"  readOnly/>
             <label>도착지</label>
-            <input readOnly value="대신화물 동서울지점"/>
+
           </div>
         </div>
 
-        <div>
+        <div class="outBox">
+          <input value="" placeholder="default"  />
           <label>비고</label>
-          <input value="안전한 포장부탁합니다"/>
+
         </div>
 
         <!---------- popup1------->
 
         <div style="display : none" id="popup1">
           <div class="">
-            <div class="">
+            <div class="outBox">
+              <input value="" placeholder="default"  type="text" name="">
               <label>시공주</label>
-              <input type="text" name="" value="박정순사모님">
+
             </div>
-            <div class="">
+            <div class="outBox">
+              <input value="" placeholder="default"  type="text" name="" >
               <label>연락처</label>
-              <input type="text" name="" value="010-6381-2233">
+
             </div>
           </div>
-          <div class="">
+          <div class="outBox">
+            <input value="" placeholder="default"  type="text" name="" >
             <label>고객주소</label>
-            <input type="text" name="" value="강원도 원주시 무실동 무실2 105-1">
+
           </div>
           <div class="">
-            <div class="">
+            <div class="outBox">
+              <input value="" placeholder="default"  type="text" name="">
               <label>상세주소</label>
-              <input type="text" name="" value="202호">
+
             </div>
             <button>주소찾기</button>
           </div>
           <div class="">
-            <div class="">
+            <div class="outBox">
+              <input value="" placeholder="default"  type="text" name="" >
               <label>현장명</label>
-              <input type="text" name="" value="고객님댁">
+
             </div>
             <button>상기주소</button>
           </div>
-          <div class="">
+          <div class="outBox">
+            <input value="" placeholder="default"  type="text" name="" >
             <label>현장주소</label>
-            <input type="text" name="" value="강원도 원주시 무실동 무실2 105-1">
+
           </div>
           <div class="">
-            <div class="">
+            <div class="outBox">
+              <input value="" placeholder="default"  type="text" name="" >
               <label>상세주소</label>
-              <input type="text" name="" value="202호">
+
             </div>
             <button>주소찾기</button>
           </div>
@@ -288,129 +241,148 @@
           <div id="화물" class="mainInfo" style="display : flex">
               <div>임시화물정보</div>
               <div class="">
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">화물지점</label>
-                  <input type="text" name="" value="대신화 동원주지점">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">지점연락처</label>
-                  <input type="text" name="" value="033-2343-9000">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">지점주소</label>
-                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">상세주소</label>
-                  <input type="text" name="" value="304호">
+
                 </div>
                 <div>
-                  <input type="text" name="" placeholder="운송비 지급">
+                  <input value="" placeholder="default"  type="text" name="" placeholder="운송비 지급">
                 </div>
-                <div class="last">
+                <div class="last outBox">
+                  <textarea placeholder="default"></textarea>
                   <label for="">기타사항</label>
-                  <textarea></textarea>
+
                 </div>
               </div>
           </div>
           <div id="택배" class="mainInfo" style="display : none">
               <div>임시택배정보</div>
               <div class="">
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">택배수신자</label>
-                  <input type="text" name="" value="대신화 동원주지점">
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">수신자전화</label>
-                  <input type="text" name="" value="033-2343-9000">
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">수신주소</label>
-                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">상세주소</label>
-                  <input type="text" name="" value="304호">
                 </div>
                 <div>
-                  <input type="text" name="" placeholder="운송비 지급">
+                  <input value="" placeholder="default"  type="text" name="" >
                 </div>
-                <div class="last">
+                <div class="last outBox">
+                  <textarea placeholder="default"></textarea>
                   <label for="">기타사항</label>
-                  <textarea></textarea>
+
                 </div>
               </div>
           </div>
           <div id="직출" class="mainInfo" style="display : none">
               <div>임시화물정보</div>
               <div class="">
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">직출자</label>
-                  <input type="text" name="" value="주식회사 아름다운 박정훈 대리">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">직출자연락처</label>
-                  <input type="text" name="" value="010-343-9000">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">차량번호</label>
-                  <input type="text" name="" value="34자 3456 렉스턴">
+
                 </div>
-                <div class="last">
+                <div class="last outBox" >
+                  <textarea placeholder="default"></textarea>
                   <label for="">기타사항</label>
-                  <textarea></textarea>
+
                 </div>
               </div>
           </div>
           <div id="퀵송" class="mainInfo" style="display : none">
               <div>임시화물정보</div>
               <div class="">
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">운송기사</label>
-                  <input type="text" name="" value="대신화물 동원주지점">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">운송기사연락처</label>
-                  <input type="text" name="" value="033-2343-9000">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">차량번호</label>
-                  <input type="text" name="" value="45가 3435오토바이">
+
                 </div>
                 <div>
-                  <input type="text" name="" placeholder="운송비 지급">
+                  <input value="" placeholder="default"  type="text" name="" placeholder="운송비 지급">
                 </div>
-                <div class="last">
+                <div class="last outBox">
+                  <textarea placeholder="default"></textarea>
                   <label for="">기타사항</label>
-                  <textarea></textarea>
+
                 </div>
               </div>
           </div>
           <div id="수하물" class="mainInfo" style="display : none">
               <div>임시화물정보</div>
               <div class="">
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">화물지점</label>
-                  <input type="text" name="" value="대신화물 동원주지점">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">지점연락처</label>
-                  <input type="text" name="" value="033-2343-9000">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">지점주소</label>
-                  <input type="text" name="" value="강원도 원주시 시청로 1길 삼성빌딩">
+
                 </div>
-                <div class="">
+                <div class="outBox">
+                  <input value="" placeholder="default"  type="text" name="" >
                   <label for="">상세주소</label>
-                  <input type="text" name="" value="304호">
+
                 </div>
                 <div>
-                  <input type="text" name="" placeholder="운송비 지급">
+                  <input value="" placeholder="default"  type="text" name="" placeholder="운송비 지급">
                 </div>
-                <div class="last">
+                <div class="last outBox">
+                  <textarea placeholder="default"></textarea>
                   <label for="">기타사항</label>
-                  <textarea></textarea>
+
                 </div>
               </div>
           </div>
@@ -424,49 +396,53 @@
 
       <div class="middle">
         <div class="wrapper">
-          <div>
-            <label>상품선택</label>
-            <button class="choice" onClick="onClick1()">상품선택</button>
-            <select class="choice1" style="display : none">
-              <option>블라인드</option>
-              <option>커튼</option>
-              <option>가구</option>
-              <option>인테리어</option>
-            </select>
+          <div id="outBox1" class="outBox">
+              <input value="" placeholder="default"  id="inputdrop1" readOnly >
+              <label>상품선택</label>
+              <div class="dropdown" id="dropdown1">
+                <button onClick="onClick2(this)">블라인드</button>
+                <button onClick="onClick2(this)">커튼</button>
+                <button onClick="onClick2(this)">가구</button>
+                <button onClick="onClick2(this)">인테리어</button>
+              </div>
           </div>
-          <div class="select choice1" style="display : none">
+          <div id="outBox2" class="choice1 outBox" style="display : none">
+            <input value="" placeholder="default"  id="inputdrop2" >
             <label>상품명</label>
-            <select onChange="onChange(this)">
-              <option>option1</option>
-              <option>option2</option>
-              <option>option3</option>
-              <option>option4</option>
-            </select>
+            <div class="dropdown" id="dropdown2">
+              <button onClick="onClick3(this)">블라인드</button>
+              <button onClick="onClick3(this)">커튼</button>
+              <button onClick="onClick3(this)">가구</button>
+              <button onClick="onClick3(this)">인테리어</button>
+            </div>
           </div>
-          <div class="choice1" style="display : none">
+          <div class="choice1 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>상품명</label>
-            <input value="01-화이트아이보리"/>
           </div>
-          <div class="choice1" style="display : none">
+          <div class="choice1 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>가공상태</label>
-            <input value="01-선염/방염"/>
+
           </div>
         </div>
         <div class="wrapper">
-          <div>
+          <div class="outBox">
+            <input value="" placeholder="default" />
             <label>가로</label>
-            <input value="150.0"/>
+
           </div>
-          <div>
+          <div class="outBox">
+            <input value="" placeholder="default" />
             <label>세로</label>
-            <input value="130.0"/>
+
           </div>
         </div>
         <div class="wrapper">
-          <div class="choice">
-            <input value="시스템 선택" readOnly/>
+          <div class="choice outBox">
+            <input placeholder="default" value="시스템 선택" readOnly/>
           </div>
-          <div class="choice1" style="display : none">
+          <div class="choice1 outBox existence" style="display : none">
             <label>시스템</label>
             <select onChange="onChange2(this)">
               <option>기본형</option>
@@ -474,46 +450,56 @@
               <option>전동형</option>
             </select>
           </div>
-          <div class="choice1 system system1" style="display : none">
+          <div class="choice1 system system1 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>방향</label>
-            <input value="좌"/>
+
           </div>
-          <div class="choice1 system system1" style="display : none">
+          <div class="choice1 system system1 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>손잡이</label>
-            <input value="프라스틱"/>
+
           </div>
-          <div class="choice1 system system1" style="display : none">
+          <div class="choice1 system system1 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>코드줄</label>
-            <input value="일반코드"/>
+
           </div>
-          <div class="choice1 system system2" style="display : none">
+          <div class="choice1 system system2 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>모터</label>
-            <input value="솜피모터"/>
+
           </div>
-          <div class="choice1 system system2" style="display : none">
+          <div class="choice1 system system2 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>리모콘</label>
-            <input value="8ch 2개"/>
+
           </div>
-          <div class="choice1 system system1 system2" style="display : none">
+          <div class="choice1 system system1 system2 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>하단바</label>
-            <input value="반달하단"/>
+
           </div>
-          <div class="choice1 system system1 system2" style="display : none">
+          <div class="choice1 system system1 system2 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>커버</label>
-            <input value="알미늄"/>
+
           </div>
-          <div class="choice1 system system2" style="display : none">
+          <div class="choice1 system system2 outBox" style="display : none">
+            <input value="" placeholder="default" />
             <label>커버칼라</label>
-            <input value="화이트아이보리"/>
+
           </div>
         </div>
-        <div>
-          <label></label>
-          <input placeholder="시공-ID"/>
+        <div class="outBox">
+          <input value="" placeholder="default" />
+          <label>시공-ID</label>
+
         </div>
-        <div>
-          <label></label>
-          <input placeholder="비고"/>
+        <div class="outBox">
+          <input value="" placeholder="default" />
+          <label>비고</label>
+
         </div>
       </div>
 
