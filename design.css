@@ -605,7 +605,7 @@ table td{
   left:0;
   top : 24px !important;
   padding : 0;
-  color:black;
+  color: #aaaaaa;
   font-size:14px !important;
   font-weight:normal;
   background:#fff !important;
@@ -618,6 +618,11 @@ table td{
 .outBox textarea:focus + label,
 .outBox textarea:not(:placeholder-shown) + label{
   transform:scale(.75) translate(-10px, -46px);
+  color : black;
+}
+
+#outBox1 label{
+  color : black;
 }
 
 input::placeholder, textarea::placeholder{
